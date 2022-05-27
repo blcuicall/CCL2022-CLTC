@@ -196,6 +196,7 @@
 - 结果公布时间：2022年9月15日
 
 （以上时间均为暂定，请关注 [CCL 2022](http://cips-cl.org/static/CCL2022/index.html) 官方网站。）
+
 （报名入口后续会在[智源指数](http://cuge.baai.ac.cn/)上开放。）
 
 ## 5. 奖项设置
