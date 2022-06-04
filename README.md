@@ -5,7 +5,7 @@
 | 时间 | 消息 |
 |-----| ----- |
 | 5 月 31 日 | 报名入口开放时间更新为 6 月 5 日 |
-| 6 月 5 日 | 赛道一、二、三、五报名入口：[智源平台](http://cuge.baai.ac.cn/#/ccl_yaclc)，赛道四报名方式请参考：[天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328) |
+| 6 月 5 日 | 赛道一、二、三、五报名入口：[智源平台](http://cuge.baai.ac.cn/#/ccl_yaclc)，赛道四需邮件报名，请参考：[天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328) |
 
 ## 目录
 - [1. 比赛介绍](#1-比赛介绍)
