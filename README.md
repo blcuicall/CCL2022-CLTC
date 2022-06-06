@@ -139,7 +139,7 @@
 
 ## 3. 评测数据
 
-本节介绍各赛道数据集来源及数据集使用规则，各赛道比赛数据及结果文件的提交格式请参看：[数据集页面](https://github.com/blcuicall/CCL2022-CLTC/baselines)。
+本节介绍各赛道数据集来源及数据集使用规则，各赛道比赛数据及结果文件的提交格式请参看：[数据集页面](https://github.com/blcuicall/CCL2022-LTC/baselines)。
 
 ### 3.1 赛道一：中文拼写检查
 
@@ -147,7 +147,7 @@
 
 本赛道允许使用任意开源数据用于训练。例如，可使用现有的真实开源数据集进行训练，如 SIGHAN 2013[^4]、CLP 2014[^5]、SIGHAN 2015[^6]等，也可以使用伪数据，如 Wang et al. [^7]提供的数据集。
 
-为便于参赛者使用，本赛道在 [datasets/track1](datasets/track1) 提供一份上述数据经过处理后的版本。参赛者也可以重新处理这些数据，或自行选用其他数据。
+为便于参赛者使用，本赛道在 [datasets/track1](https://github.com/blcuicall/CCL2022-LTC/datasets/track1) 提供一份上述数据经过处理后的版本。参赛者也可以重新处理这些数据，或自行选用其他数据。
 
 此外，SIGHAN 历年赛事中也给出了音近、形近混淆集（Confusion Set）作为参考，参赛者可按需使用。
 
@@ -174,7 +174,7 @@
 
 #### 训练集
 
-本赛道对 NLPCC2018-GEC[^8] 发布的采集自 Lang8 平台 的中介语数据进行了处理，可于 [datasets/track3]() 下载。
+本赛道对 NLPCC2018-GEC[^8] 发布的采集自 Lang8 平台的中介语数据进行了处理，可于 [datasets/track3](https://github.com/blcuicall/CCL2022-LTC/datasets/track3) 下载。
 
 参赛者**仅允许**使用上述数据用于训练。
 
@@ -190,13 +190,13 @@
 
 需要注意本次评测不提供官方训练数据集，参赛选手可自行使用任何公开的训练数据或是人造数据。
 
-具体要求请参看[赛道主页](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)。
+具体要求请参看[赛道四主页](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)。
 
 #### 开发集与测试集
 
 提供基于流利提升的多参考数据集MuCGEC[^10]。
 
-具体要求请参看[赛道主页](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)。
+具体要求请参看[赛道四主页](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)。
 
 ### 3.5 赛道五：语法纠错质量评估
 
@@ -204,7 +204,7 @@
 
 本赛道训练数据基于赛道三提供的中文 lang8 数据构建。本赛道使用 BART-large 训练了基于 seq2seq 结构的语法纠错模型，并将该模型在柱搜索解码过程中排名前 5 的结果作为待进行质量评估的语法纠错候选方案。同时评测数据给出了训练集和开发集中每个语法纠错方案的真实 F0.5 分值。
 
-参赛者**仅允许**使用赛道三提供的中文 lang8 数据，以及本赛道提供的带有语法纠错候选方案的数据。数据可以在 [datasets/track5]() 下载。
+参赛者**仅允许**使用赛道三提供的中文 lang8 数据，以及本赛道提供的带有语法纠错候选方案的数据。数据可以在 [datasets/track5](https://github.com/blcuicall/CCL2022-LTC/datasets/track5) 下载。
 
 #### 开发集与测试集
 
