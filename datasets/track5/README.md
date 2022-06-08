@@ -10,7 +10,7 @@
 
 ### 1.1 训练集
 
-本赛道的训练数据基于赛道三提供的中文lang8数据构建。本赛道 使用 BART-large 训练了基于 seq2seq 结构的语法纠错模型，并将该模型在柱搜索解码过程中排名前 10（最多为10） 的结果作为待进行质量评估的语法纠错候选方案。同时评测数据给出了训练集和开发集中每个语法纠错方案的真实 F0.5 分值。
+本赛道的训练数据基于赛道三提供的中文lang8数据构建。本赛道使用 BART-large 训练了基于 seq2seq 结构的语法纠错模型，并将该模型在柱搜索解码过程中排名前 10（最多为10） 的结果作为待进行质量评估的语法纠错候选方案。同时评测数据给出了训练集和开发集中每个语法纠错方案的真实 F0.5 分值。
 
 参赛者仅允许使用赛道三提供的中文lang8数据，以及本赛道提供的带有语法纠错候选方案的数据。
 
@@ -73,7 +73,7 @@
 ```
 testA.zip	#压缩包名字
     ├── yaclc-minimal_testA.para	# minimal 维度结果
-    └── yaclc-fluency_testA.para	# minimal 维度结果
+    └── yaclc-fluency_testA.para	# fluency 维度结果
 ```
 
 阶段二提交结果命名：
@@ -81,6 +81,6 @@ testA.zip	#压缩包名字
 ```
 testB.zip	#压缩包名字
     ├── yaclc-minimal_testB.para	# minimal 维度结果
-    └── yaclc-fluency_testB.para	# minimal 维度结果
+    └── yaclc-fluency_testB.para	# fluency 维度结果
 ```
  
