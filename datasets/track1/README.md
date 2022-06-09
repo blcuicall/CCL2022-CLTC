@@ -26,7 +26,7 @@
 
 其中原始句子与修改句子一一对应，中间使用 "\t" 分隔。
 
-- 中文拼写检查数据（SIGHAN+Wang271K）下载
+- 中文拼写检查数据（SIGHAN[^1]+Wang271K[^2]）下载
 
 > 下载地址：http://yunpan.blcu.edu.cn:80/link/EF0963CBC2A979A71971BFECE8A34234
 >
@@ -107,6 +107,5 @@ test.zip	#压缩包名字
 ```
 
 ## 参考文献
-[1]: Tseng, Y.-H., Lee, L.-H., Chang, L.-P., and Chen, H.-H. 2015. Introduction to SIGHAN 2015 Bake-off for Chinese Spelling Check. Proceedings of the Eighth SIGHAN Workshop on Chinese Language Processing, 32–37. ([pdf](https://aclanthology.org/W15-3106.pdf))
-
-[2]: Wang, D., Song, Y., Li, J., Han, J., and Zhang, H. 2018. A Hybrid Approach to Automatic Corpus Generation for Chinese Spelling Check. Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, 2517–2527. ([pdf](https://aclanthology.org/D18-1273.pdf))
+[^1]:Tseng, Y.-H., Lee, L.-H., Chang, L.-P., and Chen, H.-H. 2015. Introduction to SIGHAN 2015 Bake-off for Chinese Spelling Check. Proceedings of the Eighth SIGHAN Workshop on Chinese Language Processing, 32–37. ([pdf](https://aclanthology.org/W15-3106.pdf))
+[^2]:Wang, D., Song, Y., Li, J., Han, J., and Zhang, H. 2018. A Hybrid Approach to Automatic Corpus Generation for Chinese Spelling Check. Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, 2517–2527. ([pdf](https://aclanthology.org/D18-1273.pdf))
