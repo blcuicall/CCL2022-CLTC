@@ -15,4 +15,5 @@
 - CGED 历年数据
 
 > 下载地址：https://github.com/blcuicall/cged_datasets
-
+>
+> 参赛者可以使用 cged2021/ 目录中的数据作为开发数据。
