@@ -12,11 +12,11 @@
 
 本赛道对 NLPCC2018-GEC[^1] 发布的采集自 Lang8 平台的中介语数据进行了处理，供参赛者使用。
 
-> 下载地址：http://yunpan.blcu.edu.cn:80/link/668468944406B580C39527F3C7DB56FF
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/EDBB933F1FCD49C054F9AB7F65B0A746
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：a9MC
+> 访问密码：eSPB
 
 该数据格式为：
 
@@ -71,7 +71,7 @@
 ```
 testA.zip	#压缩包名字
     ├── yaclc-minimal_testA.para	# minimal 维度结果
-    └── yaclc-fluency_testA.para	# minimal 维度结果
+    └── yaclc-fluency_testA.para	# fluency 维度结果
 ```
 
 阶段二提交结果命名：
@@ -79,7 +79,7 @@ testA.zip	#压缩包名字
 ```
 testB.zip	#压缩包名字
     ├── yaclc-minimal_testB.para	# minimal 维度结果
-    └── yaclc-fluency_testB.para	# minimal 维度结果
+    └── yaclc-fluency_testB.para	# fluency 维度结果
 ```
 
 

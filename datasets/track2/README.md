@@ -6,11 +6,11 @@
 
 - 中文 Lang8 数据集（与赛道三相同）
 
-> 下载地址：[http://yunpan.blcu.edu.cn:80/link/668468944406B580C39527F3C7DB56FF](http://yunpan.blcu.edu.cn/link/668468944406B580C39527F3C7DB56FF)
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/EDBB933F1FCD49C054F9AB7F65B0A746
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：a9MC
+> 访问密码：eSPB
 
 - CGED 历年数据
 

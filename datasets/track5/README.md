@@ -16,19 +16,19 @@
 
 - 中文 Lang8 数据下载：
 
-> 下载地址：http://yunpan.blcu.edu.cn:80/link/668468944406B580C39527F3C7DB56FF
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/EDBB933F1FCD49C054F9AB7F65B0A746
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：a9MC
+> 访问密码：eSPB
 
 - 带有语法纠错方案的数据下载：
 
-> 下载地址：[http://yunpan.blcu.edu.cn:80/link/5BEC2C8F10A4125FE2663F06AEA98DFE](http://yunpan.blcu.edu.cn:80/link/5BEC2C8F10A4125FE2663F06AEA98DFE )
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/5EE129B3CEA8C38CB46617007105809F
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：qC05
+> 访问密码：p2av
 
 带有语法纠错候选方案的数据格式为：
 

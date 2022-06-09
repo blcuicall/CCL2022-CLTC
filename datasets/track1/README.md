@@ -12,11 +12,11 @@
 
 - 中文 Lang8 数据下载：
 
-> 下载地址：http://yunpan.blcu.edu.cn:80/link/668468944406B580C39527F3C7DB56FF
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/EDBB933F1FCD49C054F9AB7F65B0A746
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：a9MC
+> 访问密码：eSPB
 
 该数据格式为：
 
@@ -28,11 +28,11 @@
 
 - 中文拼写检查数据（SIGHAN+Wang271K）下载
 
-> 下载地址：http://yunpan.blcu.edu.cn:80/link/01C256989A05DA79579F8D610E4C0A18
+> 下载地址：http://yunpan.blcu.edu.cn:80/link/EF0963CBC2A979A71971BFECE8A34234
 >
 > 有效期限：2022-10-31 23:59
 >
-> 访问密码：Z96A
+> 访问密码：lO42
 
 该数据格式为：
 
