@@ -172,7 +172,7 @@
 
 提供 CGED-8 数据集。数据来源为 HSK 动态作文语料库[^11]和全球汉语中介语语料库[^12][^13]。CGED-8 共包括约 1,400 个段落单元、3,000 个错误。每个单元包含 1-5 个句子，每个句子都被标注了语法错误的位置、类型和修改结果。
 
-上述训练、开发与测试数据可于 [datasets/track2](https://github.com/blcuicall/CCL2022-LTC/datasets/track2) 下载。
+上述训练与测试数据可于 [datasets/track2](https://github.com/blcuicall/CCL2022-LTC/datasets/track2) 下载。
 
 ### 3.3 赛道三：多维度汉语学习者文本纠错
 
