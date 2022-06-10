@@ -40,7 +40,7 @@
   - 方雪至（北京语言大学硕士生，赛道二）
   - 周天硕（东北大学硕士生，赛道五）
 
-评测任务更详细内容可查看评测网站：[https://github.com/blcuicall/CCL2022-CLTC](https://github.com/blcuicall/CCL2022-CLTC)，遇到任何问题请发邮件或者在[Issue](https://github.com/blcuicall/CCL2022-LTC/issues)中提问，欢迎大家参与。
+评测任务更详细内容可查看评测网站：[https://github.com/blcuicall/CCL2022-CLTC](https://github.com/blcuicall/CCL2022-CLTC)，遇到任何问题请发邮件或者在[Issue](issues)中提问，欢迎大家参与。
 
 [--返回目录--](#目录)
 
@@ -150,7 +150,7 @@
 
 ## 3. 评测数据
 
-本节介绍各赛道数据集来源及数据集使用规则，各赛道比赛数据及结果文件的提交格式请参看：[数据集页面](https://github.com/blcuicall/CCL2022-LTC/baselines)。
+本节介绍各赛道数据集来源及数据集使用规则，各赛道比赛数据及结果文件的提交格式请参看：[数据集页面](datasets)。
 
 ### 3.1 赛道一：中文拼写检查
 
@@ -166,7 +166,7 @@
 
 本赛道提供基于 YACLC-CSC 数据集[^9]的开发集与测试集。在拼写错误标注方面，YACLC-CSC 继承前人的研究，规定只标注和修正“音近”和“形近”有关的错误。判定为“音近”或“形近”或“形音兼近”的依据来自相关的汉语语音学、文字学理论及对外汉语教学理论。标注过程采用多人标注再由专家审核的方式以保证标注质量。
 
-上述训练、开发与测试数据可于 [datasets/track1](https://github.com/blcuicall/CCL2022-LTC/datasets/track1) 下载。
+上述训练、开发与测试数据可于 [datasets/track1](datasets/track1) 下载。
 
 ### 3.2 赛道二：中文语法错误检测
 
@@ -183,13 +183,13 @@
 
 提供 CGED-8 数据集。数据来源为 HSK 动态作文语料库[^11]和全球汉语中介语语料库[^12][^13]。CGED-8 共包括约 1,400 个段落单元、3,000 个错误。每个单元包含 1-5 个句子，每个句子都被标注了语法错误的位置、类型和修改结果。
 
-上述训练与测试数据可于 [datasets/track2](https://github.com/blcuicall/CCL2022-LTC/datasets/track2) 下载。
+上述训练与测试数据可于 [datasets/track2](datasets/track2) 下载。
 
 ### 3.3 赛道三：多维度汉语学习者文本纠错
 
 #### 训练集
 
-本赛道对 NLPCC2018-GEC[^8] 发布的采集自 Lang8 平台的中介语数据进行了处理，可于 [datasets/track3](https://github.com/blcuicall/CCL2022-LTC/datasets/track3) 下载。
+本赛道对 NLPCC2018-GEC[^8] 发布的采集自 Lang8 平台的中介语数据进行了处理。
 
 参赛者**仅允许**使用上述数据用于训练。
 
@@ -197,7 +197,7 @@
 
 本赛道提供最小改动和流利提升两个维度的多参考数据集 YACLC-Minimal[^9]、YACLC-Fluency[^9] 。其中 YACLC-Minimal 属于最小改动维度，YACLC-Fluency属于流利提升维度。
 
-上述训练、开发与测试数据可于 [datasets/track3](https://github.com/blcuicall/CCL2022-LTC/datasets/track3) 下载。
+上述训练、开发与测试数据可于 [datasets/track3](datasets/track3) 下载。
 
 ### 3.4 赛道四：多参考多来源汉语学习者文本纠错
 
@@ -225,7 +225,7 @@
 
 **注意**：本赛道要求语法纠错结果重排序过程中只能对所提供的语法纠错候选进行重排序，不得混合其他语法纠错模型所提供的语法纠错结果。
 
-上述训练、开发与测试数据可于 [datasets/track5](https://github.com/blcuicall/CCL2022-LTC/datasets/track5) 下载。
+上述训练、开发与测试数据可于 [datasets/track5](datasets/track5) 下载。
 
 ### 3.6 数据使用规则
 
