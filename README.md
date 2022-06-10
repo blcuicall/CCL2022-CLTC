@@ -40,7 +40,7 @@
   - 方雪至（北京语言大学硕士生，赛道二）
   - 周天硕（东北大学硕士生，赛道五）
 
-评测任务更详细内容可查看评测网站：[https://github.com/blcuicall/CCL2022-CLTC](https://github.com/blcuicall/CCL2022-CLTC)，遇到任何问题请发邮件或者在[Issue](issues)中提问，欢迎大家参与。
+评测任务更详细内容可查看评测网站：[https://github.com/blcuicall/CCL2022-CLTC](https://github.com/blcuicall/CCL2022-CLTC)，遇到任何问题请发邮件或者在[Issue](https://github.com/blcuicall/CCL2022-CLTC/issues)中提问，欢迎大家参与。
 
 [--返回目录--](#目录)
 
