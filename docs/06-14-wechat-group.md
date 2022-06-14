@@ -16,4 +16,4 @@
 
 ![qr-code](wechat-qrcode.jpg)
 
-CCL2022-CLTC 组织方
+CCL2022-CLTC 主办方
