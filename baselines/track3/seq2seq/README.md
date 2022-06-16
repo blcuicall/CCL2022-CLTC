@@ -27,13 +27,13 @@ pip install --editable ./
 
 ```
 data
-	└── raw
-		├── train.src
-		├── train.tgt
-		├── valid.src
-        └── valid.tgt
-	├── bpe
-	└── processed
+  └── raw
+    ├── train.src
+    ├── train.tgt
+    ├── valid.src
+    └── valid.tgt
+  ├── bpe
+  └── processed
 ```
 
 然后运行 `data_process.sh` 进行数据预处理，预处理后的数据放在 `data/raw/processed` 中
