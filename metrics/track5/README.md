@@ -12,8 +12,8 @@ pip install -r requirements
 
 ## 使用方式
 
+#### 1.
 ```shell
-1.
 Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_file]
 ```
 其中： 
@@ -21,8 +21,9 @@ Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_fi
 `[hyp_file]`为重排序得到的top-1结果输出文件，用于第二个评价指标，文件格式参考track3 [结果提交格式](https://github.com/styxjedi/GEC-CTLC/blob/main/datasets/track3/README.md#2-%E7%BB%93%E6%9E%9C%E6%8F%90%E4%BA%A4%E6%A0%BC%E5%BC%8F)；   
 `[baseline_results_path]`为`.para`格式文件，文件格式参见[结果提交格式](https://github.com/styxjedi/GEC-CTLC/blob/main/datasets/track5/README.md#2-%E7%BB%93%E6%9E%9C%E6%8F%90%E4%BA%A4%E6%A0%BC%E5%BC%8F)。
 
+
+#### 2.
 ```shell
-2. 
 python parallel_eval.py -f [hyp_file] -r [ref_file]
 ```
 
