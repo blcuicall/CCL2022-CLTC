@@ -26,7 +26,7 @@ def read_file(data_path, flag):
         elif flag == "score":
             for line in fin:
                 line = line.strip()
-                data = json.loads(line.split('\t')[2])
+                data = line.split('\t')[2]
                 example.append(data)
 
         # 获取最大的id 原句 假设句子
