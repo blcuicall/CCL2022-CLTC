@@ -14,7 +14,7 @@ pip install -r requirements
 
 ```shell
 1.
-Python get_hyp.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_file]
+Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_file]
 ```
 其中： 
 `[test_f05_file]`为`.json`格式带有真实F0.5的参考答案文件；   
