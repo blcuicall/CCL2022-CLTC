@@ -12,7 +12,7 @@ pip install -r requirements
 
 ## 使用方式
 
-#### 1. 获取pcc分数及top-1改正句
+#### 1. 评估pcc分数并获得top-1改正句
 ```shell
 Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_file]
 ```
@@ -22,10 +22,11 @@ Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_fi
 `[baseline_results_path]`为`.para`格式文件，文件格式参见[结果提交格式](https://github.com/styxjedi/GEC-CTLC/blob/main/datasets/track5/README.md#2-%E7%BB%93%E6%9E%9C%E6%8F%90%E4%BA%A4%E6%A0%BC%E5%BC%8F)。
 
 
-#### 2. 对top-1改正句进行F0.5分数评估
+#### 2. 对top-1改正句进行评估（同track3）
 ```shell
 python parallel_eval.py -f [hyp_file] -r [ref_file]
 ```
+***注意：parallel_eval.py中部分引入的模块及函数来自[metrics/track3](https://github.com/styxjedi/GEC-CTLC/tree/main/metrics/track3)中相应文件***
 
 其中： 
 `[hyp_file]` 为 `.para` 格式文件，与1中的`[hyp_file]`为同一个文件；    
