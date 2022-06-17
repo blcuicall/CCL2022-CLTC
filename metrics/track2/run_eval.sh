@@ -5,4 +5,4 @@ OUTPUT_PATH=./demo/output.txt
 
 python pair2edits.py $SRC_PATH $HYP_PATH > $OUTPUT_PATH
 
-perl evaluation.pl $OUTPUT_PATH ./report.txt $REF_PATH
+perl evaluation.pl $OUTPUT_PATH ./demo/report.txt $REF_PATH
