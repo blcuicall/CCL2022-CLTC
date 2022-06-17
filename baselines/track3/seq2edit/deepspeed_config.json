@@ -1,0 +1,19 @@
+{
+    "train_batch_size": 256,
+    "gradient_accumulation_steps": 2,
+    "optimizer": {
+        "type": "Adam",
+        "params": {
+        "lr": 1e-5
+        }
+    },
+    "gradient_clipping": 1.0,
+    "fp16": {
+        "enabled": false
+    },
+    "amp": {
+        "enabled": true,
+        "opt_level": "O1",
+        "loss_scale": "dynamic"
+    }
+}
