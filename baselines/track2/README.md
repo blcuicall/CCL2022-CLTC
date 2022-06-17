@@ -2,7 +2,7 @@
 
 ## 1. 模型介绍
 
-本赛道提供 [seq2edit](seq2edit) 作为基线模型。seq2edit 方式基于 GECtoR[^1] 模型，使用非自回归方法，输出给定错误句子的修改（edits）。我们使用以下几种不同的模型：
+本赛道提供 seq2edit 作为基线模型。seq2edit 方式基于 GECToR[^1] 模型，使用非自回归方法，输出给定错误句子的修改（edits）。我们使用以下几种不同的模型：
 
 - seq2edit
   - chinese-bert-wwm-ext
@@ -10,6 +10,16 @@
   - chinese-electra-base-discriminator
 
 ## 2. 使用方法
+
+### 环境配置
+
+使用python3.6环境，通过
+
+~~~~bash
+pip install -r requirements.txt
+~~~~
+
+配置环境。
 
 ### 训练
 
