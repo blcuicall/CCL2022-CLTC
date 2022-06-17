@@ -72,20 +72,20 @@ python results_to_file.py --test_path ./data_qe/test.phase1.fluency.json \
 
 ### 3. 实验结果
 
-本节列出上述模型在开发集（development set）上的结果。
+本节列出上述模型在第一阶段测试集（test.phase1 set）上的结果。
 
 -  minimal 维度上的结果
 
-|         | Precision | Recall | F0.5  | Pcc |
-| ------- | --------- | ------ | ----- | --- |
-| BERT    |           |        |       |     |
+|         | Precision | Recall |  F0.5  |   Pcc  |
+| ------- | --------- | ------ |  ----- |   ---  |
+| BERT    |    0.4944 | 0.5072 | 0.4969 | 0.1425 |
 
 
 - fluency 维度上的结果
 
-|         | Precision | Recall | F0.5  | Pcc |
-| ------- | --------- | ------ | ----- | --- |
-| BERT    |           |        |       |     |
+|         | Precision | Recall |  F0.5  |   Pcc  |
+| ------- | --------- | ------ |  ----- |   ---  |
+| BERT    |    0.2572 | 0.2463 | 0.2549 | 0.0333 |
 
 
 
