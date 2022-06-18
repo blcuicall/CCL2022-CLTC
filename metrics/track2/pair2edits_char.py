@@ -5,38 +5,7 @@ import sys
 import Levenshtein
 import json
 import string
-# import jieba
-# def post_process_S(sent, op_tuple):
-#     # _st = 49
-#     # _ed = 50
-#     _st, _ed, tp, new_word = op_tuple
-#     assert tp == 'S'
-#     _st = int(_st) - 1
-#     _ed = int(_ed)
-#     # print(list(jieba.cut(sent)))
-#     st = 0
-#     ed = 0
-#     oper = ''
-#     for word in jieba.cut(sent):
-#         leng = len(word)
-#         ed += leng
-#         if st <= _st and _ed <= ed:
-#             # print(word)
-#             p1 = _st - st
-#             p2 = _ed - st
-#             # print(word[:p1]+new_word+word[p2:])
-#             # print(st+1)
-#             # print(ed)
-#             _word = word[:p1]+new_word+word[p2:]
-#             oper = (str(st+1), str(ed), 'S', _word)
-#             break
-#         st = ed
-#     if oper:
-#         # print(oper)
-#         return oper
-#     else:
-#         # print(op_tuple)
-#         return op_tuple
+
 src_path = sys.argv[1] # 不带sid的source
 tgt_path = sys.argv[2] # 不带sid的target
 # sid_path = sys.argv[3] # sid或带sid的source

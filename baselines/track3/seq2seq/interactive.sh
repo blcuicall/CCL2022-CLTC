@@ -3,10 +3,9 @@ export CUDA_VISIBLE_DEVICES=0
 
 DATA_SET=data/processed
 MODEL_PATH=$1
-SPLIT=$2
-STYLE=$3
+DATA_PATH=$2
 
-cat data/bpe/${SPLIT}.yaclc-${STYLE}.src \
+cat ${DATA_PATH} \
     | python interactive.py $DATA_SET \
     --user-dir bart-zh \
     --task translation_hf_bart \

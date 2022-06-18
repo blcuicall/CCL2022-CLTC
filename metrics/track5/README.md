@@ -26,9 +26,9 @@ Python pcc_hyps_eval.py -t [test_f05_file]  -c [hyp_file] -b [basline_results_fi
 ```shell
 python parallel_eval.py -f [hyp_file] -r [ref_file]
 ```
-***注意：parallel_eval.py中部分引入的模块及函数来自[metrics/track3](https://github.com/blcuicall/CCL2022-CLTC/tree/main/metrics/track3)中相应文件***
+**注意：parallel_eval.py 评测脚本来自[metrics/track3](https://github.com/blcuicall/CCL2022-CLTC/tree/main/metrics/track3)。**
 
 其中： 
-`[hyp_file]` 为 `.para` 格式文件，与1中的`[hyp_file]`为同一个文件；    
+`[hyp_file]` 为 `.para` 格式文件，与 2.1 中的`[hyp_file]`为同一个文件；    
 `[ref_file]` 为 `.m2` 格式的参考答案文件。
 

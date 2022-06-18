@@ -2,14 +2,38 @@
 
 ## 1. 环境配置
 
+使用以下命令配置环境：
+
 ```shell
 pip install -r requirements.txt
 ```
 
 ## 2. 使用方式
 
+计算评价指标的方式已写到 shell 脚本中，可以按如下方式运行：
+
 ```shell
 bash run_eval.sh
 ```
 
-其中evaluation.pl为官方评测脚本，pair2edits_word.py与pair2edits_char.py为将句对转换为编辑的简易脚本，区别在于pair2edits_word.py考虑了词语的边界信息，用于适配CGED21测试集；本次评测推荐使用pair2edits_char.py脚本
+其中使用的脚本说明如下：
+
+- `evaluation.pl` 为官方评测脚本，用于获得 FPR、Detection、Identification、Position、Correction 等分数。
+- `pair2edits_word.py` 与 `pair2edits_char.py` 为将句对转换为编辑的简易脚本。
+
+## 3. 特别说明
+
+汲取往届经验教训，本次比赛在所有错误定界中，**均不再考虑词的边界问题，错误均以字定界**。
+
+如对于S型错误，即便只有一个语素错误（通常是一个字），也不再将整个词判为误用。如下例：
+
+> 01337 我不能了解这道题的解法。
+>
+> 应标为  01337, 4,4,S, 理
+
+即使“了解”是一个词，也无需更换整词，而只需将错误的部分（精确到字）标出并修正。
+
+本次比赛特提供将句子转换为编辑操作的脚本，其中：
+
+- `pair2edits_word.py` 考虑了词语的边界信息，用于适配 CGED2021 及之间的测试集。
+- `pair2edits_char.py` 不考虑词语的边界信息，错误以字定界，**供本次比赛的测试集使用**。

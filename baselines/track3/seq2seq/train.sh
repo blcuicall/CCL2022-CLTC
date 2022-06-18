@@ -1,10 +1,10 @@
-#! /bin/zsh
+#! /bin/bash
 
-# export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 
 DATA_DIR=data/processed
 BART_DIR=pretrained-models/bart-base-chinese
-MODEL_NAME=07-ccl-lr1e-5-upfreq16-base
+MODEL_NAME=bart-baseline
 mkdir -p checkpoints/$MODEL_NAME
 
 python train.py $DATA_DIR \

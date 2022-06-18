@@ -40,10 +40,10 @@ python utils/preprocess_data.py -s SOURCE -t TARGET -o OUTPUT_FILE
 
 上述模型在 CGED2021 测试集上的F1结果。
 
-|         | FPR   | Decection | Identification | Position | Correction |
-| ------- | ----- | --------- | -------------- | -------- | ---------- |
-| BERT    | 31.93 | 74.45     | 46.34          | 27.53    | 14.63      |
-| RoBERTa | 30.24 | 74.26     | 46.83          | 27.82    | 15.25      |
-| ELECTRA | 29.54 | 73.08     | 45.71          | 27.64    | 14.03      |
+|         | FPR   | Decection | Identification | Position | Correction | Comprehensive |
+| ------- | ----- | --------- | -------------- | -------- | ---------- | ------------- |
+| BERT    | 31.93 | 74.45     | 46.34          | 27.53    | 14.63      | 32.83         |
+| RoBERTa | 30.24 | 74.26     | 46.83          | 27.82    | 15.25      | 33.48         |
+| ELECTRA | 29.54 | 73.08     | 45.71          | 27.64    | 14.03      | 32.73         |
 
 [^1]:Kostiantyn Omelianchuk, Vitaliy Atrasevych, Artem Chernodub, Oleksandr Skurzhanskyi.  GECToR – Grammatical Error Correction: Tag, Not Rewrite. BEA 2020.↩
