@@ -191,6 +191,8 @@ if($pr_top3+$rec_top3>0){
 format_opt($pre_top3,$hit_top3,$hash_cor_top3_count,$rec_top3,$erro_cor_count,$f1_top3,'Correction Level');
 print "Correction Level\nPre = $pre_top3 ( $hit_top3 / $hash_cor_top3_count )\nRec = $rec_top3 ( $hit_top3 / $erro_cor_count )\nF1 = $f1_top3 ( 2 * $pre_top3 * $rec_top3 /( $pre_top3 + $rec_top3 ) )\n";
 
+$comprehensive_score=0.25*$f1_detection+0.25*$f1_identification+0.25*$f1_position+0.25*$f1_top3-0.25*$fpr;
+print "\nComprehensive score = $comprehensive_score";
 print "\n\n==========END===========\n\n";
 
 
