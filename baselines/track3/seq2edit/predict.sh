@@ -16,8 +16,8 @@ deepspeed --include localhost:0 --master_port 42991 predict.py \
     --detect_vocab_path "./data/vocabulary/d_tags.txt" \
     --correct_vocab_path "./data/vocabulary/labels.txt" \
     --pretrained_transformer_path "${base_dir}/chinese-roberta-wwm-ext-large" \
-    --input_path "${base_dir}/multi-ref-dataset-2phase/train/train.uniq.src" \
-    --out_path "result/yaclc-train-f-best.preds" \
+    --input_path "${base_dir}/data/track3/yaclc-minimal_testA.src" \
+    --out_path "result/yaclc-minimal_testA.preds" \
     --special_tokens_fix 1 \
     --detokenize 1 \
     --amp
