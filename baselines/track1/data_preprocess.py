@@ -112,6 +112,41 @@ def construct_parallel_data_lbl(src_path, trg_path):
     return parallel_data
 
 
+def encode_predict_data(config, src_path, normalizer, tokenizer, max_len):
+
+    data = []
+    
+    with open(src_path, "r") as f:
+        src_lines = f.readlines()
+
+    print("data size: " + str(len(src_lines)))
+
+    for src_line in src_lines:
+        data_sample = {}
+        src_items = src_line.strip().split("\t")
+        assert len(src_items) == 2
+        src_sent = src_items[1]
+        id = src_items[0]
+
+        if config.normalize == "True":
+            src_norm = normalizer.normalize_str(src_sent)[:max_len-2]
+        else:
+            src_norm = normalizer.normalize_str(src_sent)[:max_len-2]
+
+        src_token_list = list(src_norm)
+        src_token_list.insert(0, '[CLS]')
+        src_token_list.append('[SEP]')
+        data_sample['id'] = id
+        data_sample['src_text'] = src_sent
+        data_sample['input_ids'] = tokenizer.convert_tokens_to_ids(src_token_list)
+        data_sample['token_type_ids'] = [0 for i in range(len(src_token_list))]
+        data_sample['attention_mask'] = [1 for i in range(len(src_token_list))]
+
+        data.append(data_sample)
+
+    return data
+
+
 def save_as_pkl(data, path):
 
     with open(path, 'wb') as f:
@@ -122,22 +157,25 @@ def main(config):
     print(config.__dict__)
     tokenizer = BertTokenizer.from_pretrained(config.bert_path)
     normalizer = normalizers.Sequence([Lowercase()])
-
-    if config.data_mode == "para":
-        parallel_data = construct_parallel_data_para(config.source_dir, config.target_dir)
-    elif config.data_mode == "lbl":
-        parallel_data = construct_parallel_data_lbl(config.source_dir, config.target_dir)
+    if config.target_dir:
+        if config.data_mode == "para":
+            parallel_data = construct_parallel_data_para(config.source_dir, config.target_dir)
+        elif config.data_mode == "lbl":
+            parallel_data = construct_parallel_data_lbl(config.source_dir, config.target_dir)
+        else:
+            print("Wrong data mode!")
+            exit()
+        encode_data = encode_parallel_data(config, parallel_data, normalizer, tokenizer, config.max_len)
+        save_as_pkl(encode_data, config.save_path)
     else:
-        print("Wrong data mode!")
-        exit()
-    encode_data = encode_parallel_data(config, parallel_data, normalizer, tokenizer, config.max_len)
-    save_as_pkl(encode_data, config.save_path)
+        encode_data = encode_predict_data(config, config.source_dir, normalizer, tokenizer, config.max_len)
+        save_as_pkl(encode_data, config.save_path)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--source_dir", required=True, type=str)
-    parser.add_argument("--target_dir", required=True, type=str)
+    parser.add_argument("--target_dir", type=str)
     parser.add_argument("--bert_path", default="bert-base-chinese", type=str)
     parser.add_argument("--max_len", default=128, type=int)
     parser.add_argument("--save_path", required=True, type=str)

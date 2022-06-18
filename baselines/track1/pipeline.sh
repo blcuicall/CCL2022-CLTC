@@ -3,12 +3,11 @@ DATA_DIR=./exp_data/sighan
 PRETRAIN_MODEL=./bert-base-chinese
 mkdir -p $DATA_DIR
 
-#TRAIN_SRC_FILE=data/sighan+wang.train.src
-#TRAIN_TRG_FILE=data/sighan+wang.train.trg
-TRAIN_SRC_FILE=data/sighan.train.raw.src
-TRAIN_TRG_FILE=data/sighan.train.raw.trg
-DEV_SRC_FILE=data/test.sighan15.src
-DEV_TRG_FILE=data/test.sighan15.lbl
+
+TRAIN_SRC_FILE=../../datasets/track1/sighan.train.ccl22.src
+TRAIN_TRG_FILE=../../datasets/track1/sighan.train.ccl22.trg
+DEV_SRC_FILE=../../datasets/track1/dev/yaclc-csc_dev.src
+DEV_TRG_FILE=../../datasets/track1/dev/yaclc-csc_dev.lbl
 
 
 if [ ! -f $DATA_DIR"/train.pkl" ]; then
@@ -34,7 +33,7 @@ fi
 
 # Step 2. Training
 MODEL_DIR=./exps/sighan
-CUDA_DEVICE=5
+CUDA_DEVICE=0
 mkdir -p $MODEL_DIR/bak
 cp ./pipeline.sh $MODEL_DIR/bak
 cp train.py $MODEL_DIR/bak
