@@ -6,7 +6,42 @@
 
 基线模型中使用的预训练模型是 bert-base-chinese
 
-## 2. 实验结果本节列出基线模型在测试集上的结果。
+## 2. 环境配置
+
+1. 安装pytorch
+
+   ```
+   conda create -n csc python=3.7
+   conda activate csc
+   conda install pytorch=1.7.1 cudatoolkit -c pytorch
+   ```
+
+2. 安装其他依赖
+
+   ```bash
+   python 3.7.13
+   transformers 4.19.1
+   ```
+
+## 3. 模型训练
+
+- 数据预处理+模型训练，编辑 pipeline.sh，运行
+
+  ```bash
+  bash pipeline.sh
+  ```
+
+## 4. 模型预测
+
+- 编辑 decode.sh，运行
+
+  ```bash
+  bash decode.sh
+  ```
+
+## 5. 实验结果
+
+本节列出基线模型在测试集上的结果。
 
 | dataset      | D-A   | D-P   | D-R   | D-F   | C-A   | C-P   | C-R   | C-F   |
 | ------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |

@@ -4,14 +4,14 @@
 
 其中，句子级别的评价脚本参考了ReaLiSe，字符级别的评价脚本参考了SIGHAN 2015。
 
-## 使用方式
+## 1. 使用方式
 
 ```bash
 bash csc_eval.sh hyp_file gold_file
 ```
 其中，`hyp_file`和`gold_file`的格式可参看`demo`中的`demo.hyp.labels`和`demo.gold.labels`。
 
-## 输出格式
+## 2. 输出格式
 
 ```
 CSC Evaluation Report:

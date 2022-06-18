@@ -1,12 +1,12 @@
 # 赛道二（中文语法错误检测）评价指标
 
-## 环境配置
+## 1. 环境配置
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## 使用方式
+## 2. 使用方式
 
 ```shell
 bash run_eval.sh

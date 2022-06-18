@@ -6,8 +6,6 @@
 
 - seq2edit
   - chinese-bert-wwm-ext
-  - chinese-roberta-wwm-ext-base
-  - chinese-electra-base-discriminator
 - seq2seq
   - bart-base-chinese
 
@@ -19,21 +17,17 @@
 
 -  minimal 维度上的结果
 
-|         | Precision | Recall | F0.5  |
-| ------- | --------- | ------ | ----- |
-| BERT    | 61.12     | 37.06  | 54.10 |
-| RoBERTa |           |        |       |
-| ELECTRA |           |        |       |
-| BART    | 63.34     | 37.58  | 55.70 |
+|      | Precision | Recall | F0.5  |
+| ---- | --------- | ------ | ----- |
+| BERT | 61.12     | 37.06  | 54.10 |
+| BART | 63.34     | 37.58  | 55.70 |
 
 - fluency 维度上的结果
 
-|         | Precision | Recall | F0.5  |
-| ------- | --------- | ------ | ----- |
-| BERT    | 33.97     | 12.89  | 25.59 |
-| RoBERTa |           |        |       |
-| ELECTRA |           |        |       |
-| BART    | 34.33     | 12.54  | 25.47 |
+|      | Precision | Recall | F0.5  |
+| ---- | --------- | ------ | ----- |
+| BERT | 33.97     | 12.89  | 25.59 |
+| BART | 34.33     | 12.54  | 25.47 |
 
 
 
