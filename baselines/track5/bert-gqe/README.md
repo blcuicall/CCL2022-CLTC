@@ -12,6 +12,7 @@
 ├── bert_model.py         # bert模型的相应定义
 ├── data_loader.py        # Dataset子类，完成数据读取
 ├── file_utils.py         # 处理本地数据集缓存
+├── trans_data.py         # 将train set数据处理成含有0,1标签的数据
 ├── generate_feature.py   # 对修改句生成相应质量评估分数
 ├── models.py             # 完成模型结构设计以及前向传播流程
 ├── results_to_file.py    # 将质量评估分数调整成最终提交格式
@@ -19,6 +20,7 @@
 └── README.md             # 文档说明
 ```
 ## 4.模型训练、生成、结果排序及输出
+- 训练前使用`python trans_data.py`对训练集数据进行处理
 - 训练使用```train.sh```脚本
 - 生成质量评估分数使用```generate_feature.sh```脚本
 - 根据质量评估分数并排序输出top-1结果使用```results_to_file.sh```脚本
