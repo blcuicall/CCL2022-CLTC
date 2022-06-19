@@ -1,9 +1,9 @@
 BASE_DIR=`pwd`
-PRETRAINED_MODEL_PATH=
+PRETRAINED_MODEL_PATH=checkpoints/stage2
 FINTUNED_MODEL_PATH=$BASE_DIR/output/best.th
-VOCAB_PATH=../../data/output_vocabulary/
-INPUT_FILE=
-OUTPUT_FILE=
+VOCAB_PATH=data/output_vocabulary/
+INPUT_FILE=data/cged2021/test_2021.txt
+OUTPUT_FILE=checkpoints/stage2/cged2021.pred
 
 
 

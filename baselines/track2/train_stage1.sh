@@ -4,11 +4,11 @@ set -e
 set -v
 
 BASE_DIR=`pwd`
-TRAIN_PATH=
-VALID_PATH=
-BASE_MODEL=
+TRAIN_PATH=data/lang8.train.ccl22
+VALID_PATH=data/cged2021/test_2021.txt
+BASE_MODEL=chinese-bert-wwm-ext
 VOCAB_PATH=$BASE_DIR/data/output_vocabulary/
-SAVE_MODEL=./output
+SAVE_MODEL=checkpoints/stage1
 NUM_EPOCH=10
 UPDATE_PER_EPOCH=0
 
