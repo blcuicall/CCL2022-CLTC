@@ -38,12 +38,16 @@ python utils/preprocess_data.py -s SOURCE -t TARGET -o OUTPUT_FILE
 
 ## 3. 实验结果
 
-上述模型在 CGED2021 测试集上的F1结果。
+上述模型在 CGED2021 测试集上的F1结果如下表。
 
-|         | FPR   | Decection | Identification | Position | Correction | Comprehensive |
+|         | FPR   | Detection | Identification | Position | Correction | Comprehensive |
 | ------- | ----- | --------- | -------------- | -------- | ---------- | ------------- |
 | BERT    | 31.93 | 74.45     | 46.34          | 27.53    | 14.63      | 32.83         |
 | RoBERTa | 30.24 | 74.26     | 46.83          | 27.82    | 15.25      | 33.48         |
 | ELECTRA | 29.54 | 73.08     | 45.71          | 27.64    | 14.03      | 32.73         |
+
+表中的 FPR，Detection，Identification，Position，Correction 分数可以使用 [metrics/track2](https://github.com/blcuicall/CCL2022-CLTC/tree/main/metrics/track2) 计算。Comprehensive 为加权平均后的综合得分，计算公式为：
+
+Comprehensive = 0.25 * (Detecion + Identification + Position + Correction - FPR)
 
 [^1]:Kostiantyn Omelianchuk, Vitaliy Atrasevych, Artem Chernodub, Oleksandr Skurzhanskyi.  GECToR – Grammatical Error Correction: Tag, Not Rewrite. BEA 2020.↩
