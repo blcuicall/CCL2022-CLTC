@@ -21,7 +21,7 @@
 ```
 ## 4.模型训练、生成、结果排序及输出
 - 训练前使用`python trans_data.py`对训练集数据进行处理
-- 训练使用```train.sh```脚本
+- 训练使用```train.sh```脚本，其中训练数据采用track3中的训练集
 - 生成质量评估分数使用```generate_feature.sh```脚本
 - 根据质量评估分数并排序输出top-1结果使用```results_to_file.sh```脚本
 
