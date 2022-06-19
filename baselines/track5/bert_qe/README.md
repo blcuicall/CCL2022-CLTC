@@ -28,7 +28,7 @@
 export CUDA_VISIBLE_DEVICES="0,1,2,3"
 python train.py --outdir ./save_model \
 --train_path ./data_qe/train.json \
---valid_path ./data_qe/valid.fluency.json \
+--valid_path ./data_qe/yaclc-fluency_dev.json \
 --model_name_or_path bert-base-chinese
 ```
 关键参数解析：
@@ -40,7 +40,7 @@ python train.py --outdir ./save_model \
 
 ### generate_feature.sh
 ```
-python generate_feature.py --test_path ./data_qe/test.phase1.fluency.json \
+python generate_feature.py --test_path ./data_qe/yaclc-fluency_testA.json \
 --out_path ./data_feature/output_phase1_fluency.json \
 --model_name_or_path bert-base-chinese \
 --checkpoint ./save_model/model.best.pt
@@ -52,9 +52,9 @@ python generate_feature.py --test_path ./data_qe/test.phase1.fluency.json \
 
 ### results_to_file.sh
 ```
-python results_to_file.py --test_path ./data_qe/test.phase1.fluency.json \
+python results_to_file.py --test_path ./data_qe/yaclc-fluency_testA.json \
 --test_score_path ./data_feature/output_phase1_fluency.json \
---output_path ./output/final_phase1_fluency.json
+--output_path ./output/yaclc-fluency_testA.para
 ```
 关键参数解析：
 - ```test_path```：测试集路径
