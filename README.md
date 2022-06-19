@@ -10,6 +10,7 @@
 | 6 月 12 日 | track1 dev 数据集已重新上传，请以最新版为准 |
 | 6 月 14 日 | 已建立 CCL2022-CLTC 比赛交流微信群，点击[查看详情](docs/06-14-wechat-group.md) |
 | 6 月 14 日 | 由于平台故障，[智源平台](http://cuge.baai.ac.cn/#/ccl_yaclc)账号及队伍需重新注册，请点击[查看详情](docs/06-14-cuge-re-register.md) |
+| 6 月 19 日 | 公开各赛道基线模型（[baselines](baselines) ）和评测代码（[metrics](metrics)） |
 
 ## 目录
 - [1. 比赛介绍](#1-比赛介绍)

@@ -36,6 +36,8 @@
 
 提交样例如下，也可参见历届测试集答案。
 
+**注意：可以使用 [metrics/track2](https://github.com/blcuicall/CCL2022-CLTC/tree/main/metrics/track2) 中的 `pair2edits_word/char.py` 脚本将平行句对转为下方的 edits 格式。**
+
 ```
 1,	32,	32,	M,	然后
 1,	6,	6,	M,	从
@@ -58,7 +60,7 @@
 提交结果命名：
 
 ```
-test.zip	#压缩包名字
+track2_test.zip	#压缩包名字
     └── cged.pred.txt	# 结果文件
 ```
 

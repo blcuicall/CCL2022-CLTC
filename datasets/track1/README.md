@@ -102,7 +102,7 @@
 提交结果命名：
 
 ```
-test.zip	#压缩包名字
+track1_test.zip	#压缩包名字
     └── yaclc-csc-test.lbl	# 预测结果文件
 ```
 

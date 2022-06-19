@@ -69,7 +69,7 @@
 阶段一提交结果命名：
 
 ```
-testA.zip	#压缩包名字
+track3_testA.zip	#压缩包名字
     ├── yaclc-minimal_testA.para	# minimal 维度结果
     └── yaclc-fluency_testA.para	# fluency 维度结果
 ```
@@ -77,7 +77,7 @@ testA.zip	#压缩包名字
 阶段二提交结果命名：
 
 ```
-testB.zip	#压缩包名字
+track3_testB.zip	#压缩包名字
     ├── yaclc-minimal_testB.para	# minimal 维度结果
     └── yaclc-fluency_testB.para	# fluency 维度结果
 ```
