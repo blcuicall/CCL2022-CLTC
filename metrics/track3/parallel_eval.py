@@ -6,6 +6,7 @@ from tqdm import tqdm
 from multiprocessing import Pool
 from opencc import OpenCC
 from collections import Counter
+import json
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -345,29 +346,43 @@ def print_results(best, best_cats, args):
     # Category Scores
     if args.cat:
         best_cats = processCategories(best_cats, args.cat)
-        print("")
-        print('{:=^66}'.format(title))
-        print("Category".ljust(14), "TP".ljust(8), "FP".ljust(8),
-              "FN".ljust(8), "P".ljust(8), "R".ljust(8), "F" + str(args.beta))
+        #print("")
+        #print('{:=^66}'.format(title))
+        #print("Category".ljust(14), "TP".ljust(8), "FP".ljust(8),
+              #"FN".ljust(8), "P".ljust(8), "R".ljust(8), "F" + str(args.beta))
         for cat, cnts in sorted(best_cats.items()):
             cat_p, cat_r, cat_f = computeFScore(cnts[0], cnts[1], cnts[2],
                                                 args.beta)
-            print(cat.ljust(14),
-                  str(cnts[0]).ljust(8),
-                  str(cnts[1]).ljust(8),
-                  str(cnts[2]).ljust(8),
-                  str(cat_p).ljust(8),
-                  str(cat_r).ljust(8), cat_f)
-
+        result_dict = {
+            "Category": cat,
+            "Precision": cat_p,
+            "Recall": cat_r,
+            "F0.5": cat_f,
+            }
+            #print(cat.ljust(14),
+                  #str(cnts[0]).ljust(8),
+                  #str(cnts[1]).ljust(8),
+                  #str(cnts[2]).ljust(8),
+                  #str(cat_p).ljust(8),
+                  #str(cat_r).ljust(8), cat_f)
+    else:
+        prec, rec, f = computeFScore(best['tp'], best['fp'], best['fn'], args.beta)
+        result_dict = {
+            "Precision": prec,
+            "Recall": rec,
+            "F0.5": f,
+            }
     # Print the overall results.
-    print("")
-    print('{:=^46}'.format(title))
-    print("\t".join(["TP", "FP", "FN", "Prec", "Rec", "F" + str(args.beta)]))
-    print("\t".join(
-        map(str, [best["tp"], best["fp"], best["fn"]] + list(
-            computeFScore(best["tp"], best["fp"], best["fn"], args.beta)))))
-    print('{:=^46}'.format(""))
-    print("")
+    #print("")
+    #print('{:=^46}'.format(title))
+    #print("\t".join(["TP", "FP", "FN", "Prec", "Rec", "F" + str(args.beta)]))
+    #print("\t".join(
+        #map(str, [best["tp"], best["fp"], best["fn"]] + list(
+            #computeFScore(best["tp"], best["fp"], best["fn"], args.beta)))))
+    #print('{:=^46}'.format(""))
+    #print("")
+    with open('scores.json', 'w') as fw:
+        fw.write(json.dumps(result_dict, indent=4))
 
 
 def main(args):
