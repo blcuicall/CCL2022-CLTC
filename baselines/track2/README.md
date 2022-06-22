@@ -29,8 +29,8 @@ pip install -r requirements.txt
 ```
 python utils/preprocess_data.py -s SOURCE -t TARGET -o OUTPUT_FILE
 ```
-4. 使用lang8数据，train_stage1.sh脚本训练模型
-5. 使用2020年及以前的所有训练数据作为训练集，2021年及以前的所有测试数据作为开发集（繁体字数据集需经过繁简转换）的CGED数据，train_stage2.sh脚本继续训练 
+4. 使用lang8数据，随机划分5000句话作为开发集，其余做训练集，使用train_stage1.sh脚本训练模型
+5. 使用提供的CGED数据中2020年及以前的所有训练数据作为训练集，2021年及以前的所有测试数据作为开发集（繁体字数据集需经过繁简转换），使用train_stage2.sh脚本继续训练 
 
 ### 2.3 推理
 
