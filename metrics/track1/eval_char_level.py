@@ -5,7 +5,7 @@
 
 from collections import OrderedDict
 import argparse
-
+import json
 
 def read_data(path):
         with open(path, "r", encoding="utf8") as fr:
@@ -81,11 +81,14 @@ def main(config):
         for k, v in metrics.items():
             print(f"{k}: ")
             print(", ".join([f"{k_i}: {round(v_i, 2)}" for k_i, v_i in v.items()]))
+        if config.json:
+            with open(config.json, "w",encoding="utf8") as fw:
+                fw.write(json.dumps(metrics, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
         parser = argparse.ArgumentParser()
         parser.add_argument("--gold", type=str)
         parser.add_argument("--hyp", type=str)
-
+        parser.add_argument("--json", default="", help="out json path")
         args = parser.parse_args()
         main(args)                                          

@@ -2,6 +2,7 @@
 # modified from https://github.com/DaDaMrX/ReaLiSe
 import argparse
 from collections import OrderedDict
+import json
 
 def read_file(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -93,12 +94,15 @@ def main(args):
     for k, v in metrics.items():
         print(f"{k}: ")
         print(", ".join([f"{k_i}: {round(v_i, 2)}" for k_i, v_i in v.items()]))
-    
+    if args.json:
+            with open(args.json, "w",encoding="utf8") as fw:
+                fw.write(json.dumps(metrics, ensure_ascii=False, indent=2))
     
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--hyp', required=True)
     parser.add_argument('--gold', required=True)
+    parser.add_argument("--json", required=False)
     args = parser.parse_args()
     main(args)
