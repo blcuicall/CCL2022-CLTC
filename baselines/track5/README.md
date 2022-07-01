@@ -12,7 +12,7 @@
 
 ### 2. 实验结果
 
-本节列出上述模型在开发集集（development set）上的结果。
+本节列出上述模型在开发集（development set）上的结果。
 
 -  minimal 维度上的结果
 
