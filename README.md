@@ -12,6 +12,7 @@
 | 6 月 14 日 | 由于平台故障，[智源平台](http://cuge.baai.ac.cn/#/ccl_yaclc)账号及队伍需重新注册，请点击[查看详情](docs/06-14-cuge-re-register.md) |
 | 6 月 19 日 | 公开各赛道基线模型（[baselines](baselines) ）和评测代码（[metrics](metrics)） |
 | 7 月 6 日 | 公开赛道二数据集，见 [datasets/track2](datasets/track2) 目录 |
+| 7 月 8 日 | 赛道一、二及赛道三、五的第一阶段评测[提交入口](http://cuge.baai.ac.cn/#/ccl_yaclc)开放，点击各个赛道的排行榜可见“提交评测”按钮。点击查看提交[注意事项](docs/07-08-submit-guidline.md)。 |
 
 ## 目录
 - [1. 比赛介绍](#1-比赛介绍)
