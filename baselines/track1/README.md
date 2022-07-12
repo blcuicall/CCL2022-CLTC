@@ -45,14 +45,14 @@
 
 Sentence Level 
 
-| dataset      | D-A   | D-P   | D-R   | D-F   | C-A   | C-P   | C-R   | C-F   |
-| ------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| yaclc-track1 | 69.27 | 66.26 | 49.27 | 56.52 | 66.45 | 58.68 | 43.64 | 50.05 |
+| dataset      | D-P   | D-R   | D-F   | C-P   | C-R   | C-F   |
+| ------------ | ----- | ----- | ----- | ----- | ----- | ----- |
+| yaclc-track1 | 66.26 | 49.27 | 56.52 | 58.68 | 43.64 | 50.05 |
 
 Character Level
 
-| dataset      | D-A   | D-P   | D-R   | D-F   | C-A   | C-P   | C-R   | C-F   |
-| ------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| yaclc-track1 | 69.27 | 82.12 | 49.27 | 61.59 | 66.45 | 80.27 | 43.64 | 56.54 |
+| dataset      | D-P   | D-R   | D-F   | C-P   | C-R   | C-F   |
+| ------------ | ----- | ----- | ----- | ----- | ----- | ----- |
+| yaclc-track1 | 75.00 | 52.75 | 61.94 | 89.58 | 80.27 | 84.67 |
 
-注：评价指标的 D 为 detection level，C 为 correction level，A 为 Accuracy，P 为 Precision，R 为 Recall，F为 F1 score
+注：评价指标的 D 为 detection level，C 为 correction level，P 为 Precision，R 为 Recall，F为 F1 score
