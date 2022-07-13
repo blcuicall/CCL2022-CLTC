@@ -4,7 +4,7 @@
 
 其中，句子级别的评价脚本参考了ReaLiSe，字符级别的评价脚本修改自 (Wang et al., 2019) 所提供的[开源代码](https://github.com/sunnyqiny/Confusionset-guided-Pointer-Networks-for-Chinese-Spelling-Check)。
 
-注意，根据 (Wang et al., 2019) 所提供的评价脚本，字符级别的指标只检测那些被正确检测出来的位置是否被修改正确。如果修改正确，则计入TP，若修改错误，则计入FP，若该被修改的位置，未被修改则被记为FN。
+注意，根据 (Wang et al., 2019) 所提供的评价脚本，字符级别的指标只检测那些被正确检测出来的位置是否被修改正确。如果修改正确，则计入TP，若修改错误，则计入FP，若该被修改的位置，未被修改则被记为FN。计算公式如下：
 
 $$
 Precision = TP / (TP + FP)
