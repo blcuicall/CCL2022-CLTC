@@ -7,10 +7,19 @@
 注意，根据 (Wang et al., 2019) 所提供的评价脚本，字符级别的指标只检测那些被正确检测出来的位置是否被修改正确。如果修改正确，则计入TP，若修改错误，则计入FP，若该被修改的位置，未被修改则被记为FN。
 
 $$
-Precision = TP / (TP + FP)\\
-Recall = TP / (TP + FN)\\
+Precision = TP / (TP + FP)
+
+$$
+
+$$
+Recall = TP / (TP + FN)
+$$
+
+$$
 F1 = 2 * (Precision * Recall) / (Precision + Recall)
 $$
+
+
 
 ## 1. 使用方式
 
