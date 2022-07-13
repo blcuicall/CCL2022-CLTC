@@ -8,7 +8,6 @@
 
 $$
 Precision = TP / (TP + FP)
-
 $$
 
 $$
@@ -18,8 +17,6 @@ $$
 $$
 F1 = 2 * (Precision * Recall) / (Precision + Recall)
 $$
-
-
 
 ## 1. 使用方式
 
