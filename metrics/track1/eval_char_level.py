@@ -1,94 +1,146 @@
-# -*- coding:UTF-8 -*-
-# @Author: Xuezhi Fang, Tianxin Liao
-# @Date: 2022-5-9
-# @Email: jasonfang3900@gmail.com, 329932916@qq.com
-
-from collections import OrderedDict
 import argparse
-import json
+from collections import OrderedDict
 
-def read_data(path):
-        with open(path, "r", encoding="utf8") as fr:
-                for line in fr:
-                        line = line.strip()
-                        if not line or line.startswith("#"):
-                                continue
-                        yield line
+def compute_prf(results):
+    TP = 0
+    FP = 0
+    FN = 0
+    wrong_char = 0
+    all_predict_true_index = []
+    all_gold_index = []
+    for item in results:
+        src, tgt, predict = item
+        gold_index = []
+        each_true_index = []
+        for i in range(len(list(src))):
+            if src[i] == tgt[i]:
+                continue
+            else:
+                gold_index.append(i)
+        all_gold_index.append(gold_index)
+        predict_index = []
+        for i in range(len(list(src))):
+            if src[i] == predict[i]:
+                continue
+            else:
+                predict_index.append(i)
 
+        for i in predict_index:
+            if i in gold_index:
+                TP += 1
+                each_true_index.append(i)
+            else:
+                FP += 1
+        for i in gold_index:
+            wrong_char += 1
+            if i in predict_index:
+                continue
+            else:
+                FN += 1
+        all_predict_true_index.append(each_true_index)
 
-def get_correction_map(path):
-        all_map = OrderedDict()
-        for line in read_data(path):
-                items = line.split(",")
-                item_id = items[0].strip()
-                if len(items) % 2 != 0:
-                        cor_map = dict()
-                        for idx in range(1, len(items), 2):
-                                pos = items[idx].strip()
-                                cor_char = items[idx+1].strip()
-                                cor_map[pos] = cor_char
-                        all_map[item_id] = cor_map
+    # For the detection Precision, Recall and F1
+    detection_precision = TP / (TP + FP) if (TP+FP) > 0 else 0
+    detection_recall = TP / (TP + FN) if (TP+FN) > 0 else 0
+    detection_f1 = 2 * (detection_precision * detection_recall) / (detection_precision + detection_recall) if (detection_precision + detection_recall) > 0 else 0
+
+    TP = 0
+    FP = 0
+    FN = 0
+
+    for i in range(len( all_predict_true_index)):
+        if len(all_predict_true_index[i]) > 0:
+            predict_words = []
+            for j in all_predict_true_index[i]:
+                predict_words.append(results[i][2][j])
+                if results[i][1][j] == results[i][2][j]:
+                    TP += 1
                 else:
-                        all_map[item_id] = dict()
-        return all_map
+                    FP += 1
+            for j in all_gold_index[i]:
+                if results[i][1][j]  in predict_words:
+                    continue
+                else:
+                    FN += 1
 
-def get_eval_metrics(conf_set, total):
-        # print(conf_set)
-        # fp = len(conf_set["fp"]) / (len(conf_set["fp"]) + len(conf_set["tn"]))
-        acc = (len(conf_set["tp"]) + len(conf_set["tn"])) / total
-        prec = len(conf_set["tp"]) / (len(conf_set["tp"]) + len(conf_set["fp"]))
-        recall = len(conf_set["tp"]) / (len(conf_set["tp"]) + len(conf_set["fn"]))
-        f1 = 2.0 * prec * recall / (prec + recall)
-        metrics = OrderedDict({"Accuracy": acc * 100, "Precision": prec * 100, "Recall": recall * 100, "F1": f1 * 100})
-        return metrics
+    # For the correction Precision, Recall and F1
+    correction_precision = TP / (TP + FP) if (TP+FP) > 0 else 0
+    correction_recall = TP / (TP + FN) if (TP+FN) > 0 else 0
+    correction_f1 = 2 * (correction_precision * correction_recall) / (correction_precision + correction_recall) if (correction_precision + correction_recall) > 0 else 0
+
+    metrics = OrderedDict()
+    metrics["Detection"] = OrderedDict({
+        'Precision': detection_precision * 100,
+        'Recall': detection_recall * 100,
+        'F1': detection_f1 * 100,
+    })
+    metrics["Correction"] = OrderedDict({
+        'Precision': correction_precision * 100,
+        'Recall': correction_recall * 100,
+        'F1': correction_f1 * 100,
+    })
+
+    # print("=" * 10 + " Character Level " + "=" * 10)
+    # print("Detection:")
+    # print("Precision: {}, Recall: {}, F1: {}".format(round(detection_precision * 100, 2), round(detection_recall * 100, 2), round(detection_f1 * 100, 2)))
+    # print("Detection:")
+    # print("Precision: {}, Recall: {}, F1: {}".format(round(correction_precision* 100, 2), round(correction_recall * 100, 2), round(correction_f1 * 100, 2)))
+
+    print("=" * 10 + " Character Level " + "=" * 10)
+    for k, v in metrics.items():
+        print(f"{k}: ")
+        print(", ".join([f"{k_i}: {round(v_i, 2)}" for k_i, v_i in v.items()]))
+
+    return metrics
+
+
+def read_data(path, src):
+    data = []
+    with open(path, "r", encoding="utf8") as fin:
+        lines = fin.readlines()
+    for line, src_line in zip(lines, src):
+        src_list = list(src_line)
+        sent = src_line
+        items = line.strip().split(", ")
+        if len(items) == 2:
+            pass
+        else:
+            for i in range(1, len(items), 2):
+                src_list[int(items[i])-1] = items[i+1]
+            sent = ''.join(src_list)
+        data.append(sent)
+    return data
+
+
+def read_src(path):
+    data = []
+    with open(path, "r", encoding="utf8") as fin:
+        lines = fin.readlines()
+    for line in lines:
+        items = line.strip().split("\t")
+        data.append(items[1])
+    return data
+
 
 def main(config):
-        gold_path = config.gold
-        hyp_path = config.hyp
-        gold_map = get_correction_map(gold_path)
-        hyp_map = get_correction_map(hyp_path)
-        detect_conf_dict = {k: set() for k in ["tp", "fn", "fp", "tn"]}
-        correct_conf_dict = {k: set() for k in ["tp", "fn", "fp", "tn"]}
-        for item_id in gold_map:
-                # gold: correct
-                # print(gold_map[item_id])
-                if not gold_map[item_id]:
-                        if not hyp_map[item_id]:
-                                detect_conf_dict["tn"].add(item_id)
-                                correct_conf_dict["tn"].add(item_id)
-                        else:
-                                detect_conf_dict["fp"].add(item_id)
-                                correct_conf_dict["fp"].add(item_id)
-                        continue
-                # gold: with error, pred: correct
-                if not hyp_map[item_id]:
-                        detect_conf_dict["fn"].add(item_id)
-                        correct_conf_dict["fn"].add(item_id)
-                        continue
-                if gold_map[item_id].keys() == hyp_map[item_id].keys():
-                        if set(gold_map[item_id].values()) == set(hyp_map[item_id].values()):
-                                correct_conf_dict["tp"].add(item_id)
-                        else:
-                                correct_conf_dict["fn"].add(item_id)
-                        detect_conf_dict["tp"].add(item_id)
-                else:
-                        detect_conf_dict["fn"].add(item_id)
-                        correct_conf_dict["fn"].add(item_id)
-        detect_metrics = get_eval_metrics(detect_conf_dict, len(hyp_map))
-        correct_metrics = get_eval_metrics(correct_conf_dict, len(hyp_map))
-        metrics = OrderedDict({"Detection": detect_metrics, "Correction": correct_metrics})
-        print("=" * 10 + " Character Level " + "=" * 10)
-        for k, v in metrics.items():
-            print(f"{k}: ")
-            print(", ".join([f"{k_i}: {round(v_i, 2)}" for k_i, v_i in v.items()]))
-        if config.json:
-            with open(config.json, "w",encoding="utf8") as fw:
-                fw.write(json.dumps(metrics, ensure_ascii=False, indent=2))
+    src_path = config.src
+    gold_path = config.gold
+    pred_path = config.hyp
+    src = read_src(src_path)
+    pred_data = read_data(pred_path, src)
+    gold_data = read_data(gold_path, src)
+    result = []
+    for i, j, k in zip(src, gold_data, pred_data):
+        item = (i, j, k)
+        result.append(item)
+    return compute_prf(result)
+
 
 if __name__ == "__main__":
-        parser = argparse.ArgumentParser()
-        parser.add_argument("--gold", type=str)
-        parser.add_argument("--hyp", type=str)
-        parser.add_argument("--json", default="", help="out json path")
-        args = parser.parse_args()
-        main(args)                                          
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--src", type=str)
+    parser.add_argument("--gold", type=str)
+    parser.add_argument("--hyp", type=str)
+    args = parser.parse_args()
+
+    main(args)

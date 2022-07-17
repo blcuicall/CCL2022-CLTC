@@ -1,8 +1,8 @@
 # -*- coding:UTF-8 -*-
 # modified from https://github.com/DaDaMrX/ReaLiSe
 import argparse
-from collections import OrderedDict
 import json
+from collections import OrderedDict
 
 def read_file(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -16,7 +16,7 @@ def read_file(path):
             continue
         for i in range(1, len(row), 2):
             item.append((int(row[i]), row[i + 1]))
-
+    # print(data)
     return data
 
 
@@ -50,7 +50,7 @@ def sent_metric_detect(preds, targs):
     r = tp / targ_p
     f1 = 2 * p * r / (p + r) if p + r > 0 else 0.0
     results = OrderedDict({
-        'Accuracy': acc * 100,
+        # 'Accuracy': acc * 100,
         'Precision': p * 100,
         'Recall': r * 100,
         'F1': f1 * 100,
@@ -78,7 +78,7 @@ def sent_metric_correct(preds, targs):
     r = tp / targ_p
     f1 = 2 * p * r / (p + r) if p + r > 0 else 0.0
     results = OrderedDict({
-        'Accuracy': acc * 100,
+        # 'Accuracy': acc * 100,
         'Precision': p * 100,
         'Recall': r * 100,
         'F1': f1 * 100,
@@ -94,15 +94,11 @@ def main(args):
     for k, v in metrics.items():
         print(f"{k}: ")
         print(", ".join([f"{k_i}: {round(v_i, 2)}" for k_i, v_i in v.items()]))
-    if args.json:
-            with open(args.json, "w",encoding="utf8") as fw:
-                fw.write(json.dumps(metrics, ensure_ascii=False, indent=2))
-    
+    return metrics
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--hyp', required=True)
     parser.add_argument('--gold', required=True)
-    parser.add_argument("--json", required=False)
     args = parser.parse_args()
     main(args)
