@@ -38,7 +38,10 @@ with open(src_path) as f_src, open(tgt_path) as f_tgt:
                 continue
             if len(merged_edits) > 0:
                 last_edit = merged_edits[-1]
-                if last_edit[2] == edit[1]:
+                if last_edit[0] == 'insert' and edit[0] == 'insert' and last_edit[2] == edit[1]:
+                    new_edit = ('insert', last_edit[1], edit[2], last_edit[3], edit[4])
+                    merged_edits[-1] = new_edit
+                elif last_edit[2] == edit[1]:
                     assert last_edit[4] == edit[3]
                     new_edit = ('hybrid', last_edit[1], edit[2], last_edit[3], edit[4])
                     merged_edits[-1] = new_edit
@@ -46,18 +49,54 @@ with open(src_path) as f_src, open(tgt_path) as f_tgt:
                     and tgt_line[last_edit[3]:last_edit[4]] == src_line[edit[1]:edit[2]]:
                     new_edit = ('luanxu', last_edit[1], edit[2], last_edit[3], edit[4])
                     merged_edits[-1] = new_edit
-                elif last_edit[0] == 'delete' and edit[0] == 'insert' \
-                    and src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]:edit[4]]:
-                    new_edit = ('luanxu', last_edit[1], edit[2], last_edit[3], edit[4])
-                    merged_edits[-1] = new_edit
+                elif last_edit[0] == 'delete' and edit[0] == 'insert':
+                    if src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]:edit[4]]:
+                    # print(src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]:edit[4]])
+                        new_edit = ('luanxu', last_edit[1], edit[2], last_edit[3], edit[4])
+                        merged_edits[-1] = new_edit
+                    elif edit[4] < len(tgt_line) and tgt_line[edit[3]] == tgt_line[edit[4]] and src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]+1:edit[4]+1]:
+                        new_edit = ('luanxu', last_edit[1], edit[2]+1, last_edit[3], edit[4])
+                        merged_edits[-1] = new_edit
+                    else:
+                        merged_edits.append(edit)
                 else:
                     merged_edits.append(edit)
             else:
                 merged_edits.append(edit)
-
+        merged_edits2 = []
+        for edit in merged_edits:
+            if edit[0] == 'equal':
+                continue
+            if len(merged_edits2) > 0:
+                last_edit = merged_edits2[-1]
+                if last_edit[0] == 'insert' and edit[0] == 'insert' and last_edit[2] == edit[1]:
+                    new_edit = ('insert', last_edit[1], edit[2], last_edit[3], edit[4])
+                    merged_edits2[-1] = new_edit
+                elif last_edit[2] == edit[1]:
+                    assert last_edit[4] == edit[3]
+                    new_edit = ('hybrid', last_edit[1], edit[2], last_edit[3], edit[4])
+                    merged_edits2[-1] = new_edit
+                elif last_edit[0] == 'insert' and edit[0] == 'delete' \
+                    and tgt_line[last_edit[3]:last_edit[4]] == src_line[edit[1]:edit[2]]:
+                    new_edit = ('luanxu', last_edit[1], edit[2], last_edit[3], edit[4])
+                    merged_edits2[-1] = new_edit
+                elif last_edit[0] == 'delete' and edit[0] == 'insert':
+                    if src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]:edit[4]]:
+                    # print(src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]:edit[4]])
+                        new_edit = ('luanxu', last_edit[1], edit[2], last_edit[3], edit[4])
+                        merged_edits2[-1] = new_edit
+                    elif edit[4] < len(tgt_line) and tgt_line[edit[3]] == tgt_line[edit[4]] and src_line[last_edit[1]:last_edit[2]] == tgt_line[edit[3]+1:edit[4]+1]:
+                        new_edit = ('luanxu', last_edit[1], edit[2]+1, last_edit[3], edit[4])
+                        merged_edits2[-1] = new_edit
+                    else:
+                        merged_edits2.append(edit)
+                else:
+                    merged_edits2.append(edit)
+            else:
+                merged_edits2.append(edit)
         # generate edit sequence
         result = []
-        for edit in merged_edits:
+        for edit in merged_edits2:
             if tgt_line[edit[3]:edit[4]] == '[UNK]':
                 continue
             if edit[0] == "insert":
