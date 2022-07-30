@@ -5,6 +5,7 @@
 ## 最新消息
 | 时间 | 消息 |
 |-----| ----- |
+| 7 月 30 日 | [关于队伍重组功能限时上线的说明](docs/07-31-reorganize.md)  <br>[关于赛道三、赛道五第二阶段提交的说明](07-31-phrase-2.md) |
 | 7 月 8 日 | 赛道一、二及赛道三、五的第一阶段评测[提交入口](http://cuge.baai.ac.cn/#/ccl_yaclc)开放，<br>点击各个赛道的排行榜可见“提交评测”按钮。点击查看提交[注意事项](docs/07-08-submit-guidline.md)。 |
 | 7 月 6 日 | 公开赛道二数据集，见 [datasets/track2](datasets/track2) 目录 |
 | 6 月 19 日 | 公开各赛道基线模型（[baselines](baselines) ）和评测代码（[metrics](metrics)） |
