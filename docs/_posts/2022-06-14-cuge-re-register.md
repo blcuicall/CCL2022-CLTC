@@ -2,7 +2,7 @@
 layout: post
 title: 关于智源平台队伍重新注册的通知
 date: 2022-06-14
-categories: info
+categories: message
 ---
 
 尊敬的各位参赛者：

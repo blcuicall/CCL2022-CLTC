@@ -2,7 +2,7 @@
 layout: post
 title: 比赛交流微信群已建立
 date:   2022-06-14
-categories: info
+categories: message
 ---
 
 各位参赛者：

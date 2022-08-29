@@ -2,7 +2,7 @@
 layout: post
 title: 评测报告撰写规范
 date:   2022-08-29
-categories: info
+categories: message
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: 结果提交注意事项
 date:   2022-07-08
-categories: info
+categories: message
 ---
 
 1. 各赛道排行榜初始展示的为baseline模型的测试结果。
