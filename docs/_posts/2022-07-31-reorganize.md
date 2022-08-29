@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 关于队伍重组功能限时上线的说明
-date:   2022-08-29
+date:   2022-07-31
 categories: info
 ---
 

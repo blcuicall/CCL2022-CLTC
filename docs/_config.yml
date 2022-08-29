@@ -32,6 +32,7 @@ url: "https://blcuicall.github.io/CCL2022-CLTC" # the base hostname & protocol f
 
 # Build settings
 theme: minima
+#theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
