@@ -19,6 +19,6 @@ categories: message
 >
 > GEC的英文全称
 
-![qr-code](/assets/wechat-qrcode.jpg)
+![qr-code](/CCL2022-CLTC/assets/wechat-qrcode.jpg)
 
 CCL2022-CLTC 主办方
