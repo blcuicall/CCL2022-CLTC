@@ -1,5 +1,5 @@
 ---
 layout: home
-title: 公告
+title: 新闻公告
 permalink: /message/
 ---
