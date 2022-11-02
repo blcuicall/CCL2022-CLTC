@@ -32,12 +32,12 @@ url: "https://blcuicall.github.io/CCL2022-CLTC" # the base hostname & protocol f
 
 # Build settings
 # theme: minima
-theme: minimal-mistakes-jekyll
+# theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-include-cache
 
 include: ["_pages"]
