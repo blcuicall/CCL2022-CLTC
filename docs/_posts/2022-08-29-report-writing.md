@@ -1,17 +1,10 @@
 ---
-layout: splash
-classes: wide
+layout: post
 title: 评测报告撰写规范
-excerpt: 本规范由CCL2022-CLTC技术评测组织方提供，列出评测报告中需要包含的各个章节，供参赛队伍作为撰写评测报告时的模板。本规范并非强制性的，而是推荐性的，参赛者不需严格按照本规范进行撰写。
-time:   2022-08-29
-permalink: /message/评测报告撰写规范
+date:   2022-08-29
+categories: message
 ---
 
-<div style="margin:20px;"></div>
-
-# 评测报告撰写规范
-
-<div style="color:#C0C0C0; font-size:14px; margin:10px;"> 2022-08-29 </div>
 
 本规范由CCL2022-CLTC技术评测组织方提供，列出评测报告中需要包含的各个章节，供参赛队伍作为撰写评测报告时的模板。本规范并非强制性的，而是推荐性的，参赛者不需严格按照本规范进行撰写。
 

@@ -1,17 +1,9 @@
 ---
-layout: splash
-classes: wide
+layout: post
 title: 关于提交评测报告及注册CCL 2022会议的说明
-excerpt: 本次评测（CCL2022-CLTC）已于8月25日23时59分关闭提交通道，感谢所有参赛队伍的积极参与！参赛队伍需于9月25日23时59分前提交评测报告，现就评测报告相关事项说明如下。
-time:   2022-08-29
-permalink: /message/关于提交评测报告及注册CCL2022会议的说明
+date:   2022-08-29
+categories: message
 ---
-
-<div style="margin:20px;"></div>
-
-# 关于提交评测报告及注册CCL 2022会议的说明
-
-<div style="color:#C0C0C0; font-size:14px; margin:10px;"> 2022-08-29 </div>
 
 本次评测（CCL2022-CLTC）已于8月25日23时59分关闭提交通道，感谢所有参赛队伍的积极参与！参赛队伍需于**9月25日23时59分**前提交评测报告，现就评测报告相关事项说明如下。
 

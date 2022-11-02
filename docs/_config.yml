@@ -31,16 +31,10 @@ url: "https://blcuicall.github.io/CCL2022-CLTC" # the base hostname & protocol f
 #github_username:  jekyll
 
 # Build settings
-# theme: minima
-# theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+theme: minima
+#theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
-  - jekyll-include-cache
-
-include: ["_pages"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

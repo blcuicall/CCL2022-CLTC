@@ -1,17 +1,9 @@
 ---
-layout: splash
-classes: wide
+layout: post
 title: 关于智源平台队伍重新注册的通知
-excerpt: 上周末智源平台出现故障，虽然经过平台开发团队努力恢复，仍有部分6月1日以来注册报名数据缺失，需要烦请各位选手重新注册报名和创建队伍。
-time: 2022-06-14
-permalink: /message/关于智源平台队伍重新注册的通知
+date: 2022-06-14
+categories: message
 ---
-
-<div style="margin:20px;"></div>
-
-# 关于智源平台队伍重新注册的通知
-
-<div style="color:#C0C0C0; font-size:14px; margin:10px;"> 2022-06-14 </div>
 
 尊敬的各位参赛者：
 

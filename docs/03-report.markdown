@@ -1,6 +1,5 @@
 ---
-layout: splash
-classes: wide
+layout: page
 title: 评测报告
 permalink: /report/
 ---

@@ -2,20 +2,15 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: splash
-classes: wide
-title: "CCL2022-CLTC"
-permalink: /
+layout: page
+title: CCL2022-CLTC
 exclude: true
 ---
-<br>
 
-# 最新消息
+## 最新消息
 
-<br>
-
-|    时间    | 消息                                                         |
-| :----------: | :------------------------------------------------------------ |
+| 时间       | 消息                                                         |
+| ---------- | ------------------------------------------------------------ |
 | 8 月 29 日 | [评测官方网站](https://blcuicall.github.io/CCL2022-CLTC/)启用 <br>请关注：[关于提交评测报告及注册CCL 2022会议的说明](https://blcuicall.github.io/CCL2022-CLTC/message/2022/08/29/report-submmision.html) <br>及 [评测报告撰写规范](https://blcuicall.github.io/CCL2022-CLTC/message/2022/08/29/report-writing.html) |
 | 8 月 25 日 | 各赛道评测通道已关闭                                         |
 | 7 月 30 日 | [关于队伍重组功能限时上线的说明](https://github.com/blcuicall/CCL2022-CLTC/tree/main/info/07-31-reorganize.md)  <br>[关于赛道三、赛道五第二阶段提交的说明](https://github.com/blcuicall/CCL2022-CLTC/tree/main/info/07-31-phrase-2.md) |
