@@ -1,0 +1,7 @@
+main:
+  - title: "评测介绍"
+    url: /intro/
+  - title: "新闻公告"
+    url: /message/
+  - title: "评测报告"
+    url: /report/    

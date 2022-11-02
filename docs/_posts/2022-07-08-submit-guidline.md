@@ -1,9 +1,17 @@
 ---
-layout: post
+layout: splash
+classes: wide
 title: 结果提交注意事项
-date:   2022-07-08
-categories: message
+excerpt: 结果提交注意事项
+time:   2022-07-08
+permalink: /message/结果提交注意事项
 ---
+
+<div style="margin:20px;"></div>
+
+# 结果提交注意事项
+
+<div style="color:#C0C0C0; font-size:14px; margin:10px;"> 2022-07-08 </div>
 
 1. 各赛道排行榜初始展示的为baseline模型的测试结果。
 2. 请务必按照各赛道所要求的的评测提交格式命名文件和上传。
