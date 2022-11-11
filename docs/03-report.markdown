@@ -6,8 +6,8 @@ permalink: /report/
 CLTC 2022 综述报告与各参赛队伍提交的评测报告如下：
 
 ### 评测综述：
-- CLTC 2022：汉语学习者文本纠错技术评测及研究综述 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview-wang.pdf)
-- CLTC 2022：汉语学习者文本纠错评测总结报告 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview-wang_slides.pdf)
+- CLTC 2022：汉语学习者文本纠错技术评测及研究综述 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview.pdf)
+- CLTC 2022：汉语学习者文本纠错评测总结报告 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview_slides.pdf)
 
 ### 赛道一：中文拼写检查
 
