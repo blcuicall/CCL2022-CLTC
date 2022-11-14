@@ -3,27 +3,28 @@ layout: page
 title: 评测报告
 permalink: /report/
 ---
-CLTC 2022 综述报告与各参赛队伍提交的评测报告如下：
+CLTC 2022 综述报告与各参赛队伍的评测报告如下：
 
-### 评测综述：
+### 评测综述
+
 - CLTC 2022：汉语学习者文本纠错技术评测及研究综述 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview.pdf)
 - CLTC 2022：汉语学习者文本纠错评测总结报告 [[pdf]](/CCL2022-CLTC/reports/cltc2022-overview_slides.pdf)
 
 ### 赛道一：中文拼写检查
 
 - 一等奖：哒哒（达观数据）[[paper]](/CCL2022-CLTC/reports/track1/cltc2022-track1-rank1-zhou.pdf) [[slides]](/CCL2022-CLTC/reports/track1/cltc2022-track1-rank1-zhou_slides.pptx)
-- 二等奖：iFunCun（方寸无忧）[[paper]](/CCL2022-CLTC/reports/track1/cltc2022-track1-rank2-ma.pdf) 
+- 二等奖：iFunCun（方寸无忧）[[paper]](/CCL2022-CLTC/reports/track1/cltc2022-track1-rank2-ma.pdf)
 - 三等奖：csc_runner（CVTE）[[paper]](/CCL2022-CLTC/reports/track1/cltc2022-track1-rank3-liu.pdf)
 
 ### 赛道二：中文语法错误检测
 
 - 一等奖：NLP的未来（好未来) [[paper]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank1-li.pdf)  [[slides]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank1-li_slides.pptx)
-- 二等奖：一一（达观数据）[[paper]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank2-mu.pdf) 
-- 三等奖：中国足球队（蜜度）[[paper]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank3-li.pdf) 
+- 二等奖：一一（达观数据）[[paper]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank2-mu.pdf)
+- 三等奖：中国足球队（蜜度）[[paper]](/CCL2022-CLTC/reports/track2/cltc2022-track2-rank3-li.pdf)
 
 ### 赛道三：多维度汉语学习者文本纠错
 
-- 一等奖：kk（北京大学）[[paper]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank1-huang.pdf) [[slides]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank1-huang_slides.pptx) 
+- 一等奖：kk（北京大学）[[paper]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank1-huang.pdf) [[slides]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank1-huang_slides.pptx)
 - 二等奖：改正带小助手（苏州大学）[[paper]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank2-song.pdf)  
 - 三等奖：BUPTCL（北京邮电大学）[[paper]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank3-sun.pdf) [[slides]](/CCL2022-CLTC/reports/track3/cltc2022-track3-rank3-sun_slides.pptx)
 

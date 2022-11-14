@@ -1,12 +1,11 @@
 
 # CCL 2022 汉语学习者文本纠错评测
 
-
 ## 最新消息
 
 | 时间 | 消息 |
 |-----| ----- |
-| 10 月 30 日 | 评测研讨会召开，研究综述、总结报告及各赛道获奖队伍的评测报告已公开在[评测官方网站](https://blcuicall.org/CCL2022-CLTC/report/) |
+| 10 月 30 日 | CLTC 2022 评测研讨会召开 <br> 综述报告与各参赛队伍的评测报已公开在[评测官方网站](https://blcuicall.org/CCL2022-CLTC/report/) |
 | 10 月 15 日 | 各赛道获奖信息已公布，点击[查看详情](https://blcuicall.org/CCL2022-CLTC/message/2022/10/15/award.html) |
 | 8 月 29 日 | [评测官方网站](https://blcuicall.github.io/CCL2022-CLTC/)启用 <br>请关注：[关于提交评测报告及注册CCL 2022会议的说明](https://blcuicall.github.io/CCL2022-CLTC/message/2022/08/29/report-submmision.html) <br>及 [评测报告撰写规范](https://blcuicall.github.io/CCL2022-CLTC/message/2022/08/29/report-writing.html) |
 | 8 月 25 日 | 各赛道评测通道已关闭 |
@@ -20,7 +19,6 @@
 | 6 月 10 日 | 数据集已公开，见 [datasets](datasets) 目录 |
 | 6 月 5 日 | 报名入口已开通，详情请见：[报名方式](#6-报名方式) |
 | 5 月 31 日 | 报名入口开放时间更新为 6 月 5 日 |
-
 
 ## 目录
 
@@ -36,14 +34,14 @@
 
 汉语学习者文本纠错任务（Chinese Learner Text Correction，CLTC）旨在自动检测并修改汉语学习者文本中的标点、拼写、语法、语义等错误，从而获得符合原意的正确句子。近年来，该任务越来越受到关注，也出现了一些有潜在商业价值的应用。为了推动这项研究的发展，研究者通过专家标注以及众包等形式构建一定规模的训练和测试数据，在语法检查以及语法纠错等不同任务上开展技术评测。同时，由于汉语学习者文本纠错任务相对复杂、各评测任务以及各数据集之间存在差异，在一定程度上限制了文本纠错的发展。因此，我们希望通过汇聚、开发数据集，建立基于多参考答案的评价标准，完善文本纠错数据及任务，聚焦该研究领域中的前沿问题，进一步推动汉语学习者文本纠错研究的发展。
 
-我们依托第二十一届中国计算语言学大会（CCL 2022），组织汉语学习者文本纠错评测。本次评测既整合了已有的相关评测数据和任务，又有新开发的数据集，以设置多赛道、统一入口的方式开展比赛任务。同时，我们研制了各赛道具有可比性的评测指标，立足于构建汉语学习者文本纠错任务的基准评测框架。 
+我们依托第二十一届中国计算语言学大会（CCL 2022），组织汉语学习者文本纠错评测。本次评测既整合了已有的相关评测数据和任务，又有新开发的数据集，以设置多赛道、统一入口的方式开展比赛任务。同时，我们研制了各赛道具有可比性的评测指标，立足于构建汉语学习者文本纠错任务的基准评测框架。
 
 - 组织者
   - 杨麟儿（北京语言大学）
   - 杨尔弘（北京语言大学）
   - 李正华（苏州大学）
   - 孙茂松（清华大学）
-  -  张民（苏州大学）
+  - 张民（苏州大学）
   - 刘正皓（东北大学）
   - 饶高琦（北京语言大学）
   - 李辰（阿里巴巴达摩院）
@@ -78,7 +76,6 @@
 </tr>
 </table>
 
-
 **赛道二**：中文语法错误检测（Chinese Grammatical Error Diagnosis）任务目的是检测出中文文本中每一处语法错误的位置、类型。语法错误的类型分为赘余(Redundant Words，R)、遗漏(Missing Words，M)、误用(Word Selection，S)、错序(Word Ordering Errors，W)四类。评测任务要求参加评测的系统输入句子（群），其中包含有零个到多个错误。参赛系统应判断该输入是否包含错误，并识别错误类型，标记出其在句子中的位置和范围，对缺失和误用给出修正答案。
 
 <p align='center'>表2：中文语法错误检测任务示例</p>
@@ -100,7 +97,6 @@
     <td>00038800464, correct</br>（原句正确，没有错误）</td>
 </tr>
 </table>
-
 
 **赛道三**：多维度汉语学习者文本纠错（Multidimensional Chinese Learner Text Correction）。同一个语法错误从不同语法点的角度可被划定为不同的性质和类型[^1]，也会因语言使用的场景不同、具体需求不同，存在多种正确的修改方案。赛道三的数据中提供针对一个句子的多个参考答案，并且从最小改动（Minimal Edit，M）和流利提升（Fluency Edit，F）两个维度对模型结果进行评测。最小改动维度要求尽可能好地维持原句的结构，尽可能少地增删、替换句中的词语，使句子符合汉语语法规则；流利提升维度则进一步要求将句子修改得更为流利和地道，符合汉语母语者的表达习惯。如表 3 中所示，原句在两个维度均有多个语法纠错的参考答案。
 
@@ -245,7 +241,6 @@
 
 ### 3.6 数据使用规则
 
-
 本次评测在模型训练方面的具体规则如下：
 
 1. 非本比赛提供的数据必须可以开源获取，并应在论文中说明或以其他方式向比赛组织方公开，不得使用闭源及私有数据。
@@ -316,11 +311,13 @@
 ## 6. 报名方式
 
 ### 赛道一、二、三、五
+
 报名入口：[智源平台](http://cuge.baai.ac.cn/#/ccl_yaclc)
 
 操作方式：注册智源平台，由队长创建队伍后，凭邀请码邀请其余组员入队。每个队伍需指定一位提交人提交评测，默认为队伍创建人。队伍可以在一、二、三、五四个赛道上提交结果。
 
 ### 赛道四
+
 报名方式：在[天池平台](https://tianchi.aliyun.com/dataset/dataDetail?dataId=131328)页面下载报名表，按照规定要求填写后，以附件形式发送邮件到邮箱：ccl2022track4@163.com 进行报名
 
 [--返回目录--](#目录)
@@ -328,6 +325,7 @@
 ## 7. 奖项设置
 
 本次评测将评选出一、二、三等奖，奖池共计 50000 元人民币：
+
 - 一等奖 0-5 名，奖金合计 25000 元；
 - 二等奖 0-5 名，奖金合计 15000 元；
 - 三等奖 0-5 名，奖金合计 10000 元。
@@ -349,5 +347,4 @@
 [^9]: Yingying Wang, Cunliang Kong, Liner Yang, Yijun Wang, Xiaorong Lu, Renfen Hu, Shan He, Zhenghao Liu, Yun Chen, Erhong Yang, and Maosong Sun. 2021. YACLC: A Chinese Learner Corpus with Multidimensional Annotation. arXiv preprint arXiv:2112.15043. ([pdf](https://arxiv.org/abs/2112.15043))
 [^10]: Yue Zhang, Zhenghua Li, Zuyi Bao, Jiacheng Li, Bo Zhang, Chen Li, Fei Huang, and Min Zhang. 2022. MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction. In Proceedings of NAACL-HLT. ([pdf](https://arxiv.org/pdf/2204.10994.pdf))
 [^11]: Gaoqi Rao, Erhong Yang, and Baolin Zhang. Overview of NLPTEA-2020 Shared Task for Chinese Grammatical Error Diagnosis. In Proceedings of the 6th Workshop on Natural Language Processing Techniques for Educational Applications. ([pdf](https://aclanthology.org/2020.nlptea-1.4.pdf))
-[^12]: 张宝林. 2009. “HSK动态作文语料库”的特色与功能. 汉语国际教育, 4:71–79.
 [^13]: 张宝林,崔希亮. 2022. “全球汉语中介语语料库”的特点与功能. 世界汉语教学, 01:90-100.
